@@ -1,0 +1,21 @@
+# Demos 
+https://fenicsproject.org/olddocs/dolfin/latest/python/demos.html#all-documented-demos
+
+
+# Run Prog 
+source activate fenicsproject  
+python demo_poisson.py
+
+# env with mshr 
+source activate fenicstest (or - conda activate fenicstest) not sure what the difference is. https://fenicsproject.discourse.group/t/anaconda-installation-of-fenics-and-mshr/2062/13 this link helped me get mshr to work (woop)
+
+# Setting up multiple BCs 
+https://fenicsproject.org/pub/tutorial/sphinx1/._ftut1005.html
+
+# Multiple source terms 
+https://fenicsproject.discourse.group/t/how-to-define-piecewise-source-terms/512
+https://fenicsproject.org/qa/7684/how-to-define-piecewise-function-on-more-pieces-of-the-domain/
+
+# General understanding of Fenics: (v v useful)
+https://fenicsproject.org/pub/tutorial/html/._ftut1004.html
+

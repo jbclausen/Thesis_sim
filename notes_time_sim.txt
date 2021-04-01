@@ -1,0 +1,19 @@
+Why is the flow moving so fast? 
+    gradient too steep 
+    equation for finding velocity is wrong 
+
+Why is the flow seemingly spreading at constant rate? 
+    choosing gradients that are "reasonable" therefore the average is being left out 
+    equation for finding velocity is wrong 
+    lack of sink rate affects pressure distribution and therefore the flow 
+        how can I add the sink rate again? 
+            - multiplesinks.py 
+
+Post March 26th Sim: 
+    The sim definitely needs a sink rate. 
+    use multiple_sinks to do this 
+    How to choose a sink rate? 
+        - use the one from the dry out sim (segment_case_dry_out) and see what happens? 
+
+
+        
