@@ -69,7 +69,7 @@ while time >= 0:
     u = TrialFunction(V)
     v = TestFunction(V)
     p1 = Expression("-18514813", degree=0, domain=mesh)
-    f = Expression("x[1] < (- radius + height + DOLFIN_EPS) ? p1 : 0", p1=p1, radius=radius, height=height, degree=1)      # sink term
+    #f = Expression("x[1] < (- radius + height + DOLFIN_EPS) ? p1 : 0", p1=p1, radius=radius, height=height, degree=1)      # sink term
     f = Expression("0", degree=0)      # sink term
     g = Expression("0", degree=0)      # no crossing Neumann Boundary 
     a = inner(grad(u), grad(v))*dx

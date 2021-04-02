@@ -46,5 +46,7 @@ def generate_video():
     print("\n--- \tVideo Done \t---")
     print("--- \t%.2f seconds \t---" % (time.time() - start_time))
 
+
 if __name__ == "__main__":
     generate_video()
+    
