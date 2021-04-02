@@ -13,7 +13,7 @@ from scipy.optimize import curve_fit
 
 # Curve to fit to the front 
 def f_curve(x,a,b):
-    return a + b*pow(x,2)
+    return a + b*pow(x,2) #+ c*pow(x,4)
 
 # Time step constant
 dt = 1
@@ -41,6 +41,7 @@ heights = []
 time = 0
 c_1 = -radius + height 
 c_2 = 0
+c_3 = 0
 sim_Paused = False # Change to True to pick up from previous sim
 while time >= 0:
 

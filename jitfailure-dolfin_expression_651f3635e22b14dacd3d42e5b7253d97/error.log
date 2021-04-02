@@ -1,4 +1,0 @@
-/var/folders/w3/jz6yj2kd1pvbb__ngcjlh_zc0000gn/T/tmpmmd441wh/dolfin_expression_651f3635e22b14dacd3d42e5b7253d97.cpp:67:53: error: extraneous ')' before ';'
-          values[0] = x[1] < 0 + DOLFIN_EPS ? p1 : 0);
-                                                    ^
-1 error generated.
