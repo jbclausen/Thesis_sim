@@ -11,7 +11,7 @@ start_time = time.time()
 image_folder = "./TimeSim/Pics/"
 output_folder = "./TimeSim/"
 video_name = output_folder + "TimeSim.mp4"
-fps = 50
+fps = 25
 
 #  Generate Video
 

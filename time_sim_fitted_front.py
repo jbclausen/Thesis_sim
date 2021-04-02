@@ -5,7 +5,7 @@
 # Imports 
 from dolfin import *
 from mshr import *
-import scipy.io
+import scipy.io 
 import matplotlib.pyplot as plt
 import math 
 import numpy as np
@@ -45,9 +45,9 @@ sim_Paused = False # Change to True to pick up from previous sim
 while time >= 0:
 
     if (sim_Paused):
-        c_1 = 0.004111927975253863
-        c_2 = -8.018947
-        time = 153
+        c_1 = -0.0038969266690467306
+        c_2 = -24.606042
+        time = 30
         sim_Paused = False
 
     print("Time step: \t", time, "\tConstants:\t", c_1, c_2)
@@ -152,19 +152,19 @@ while time >= 0:
     # Plot solution 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14,8), gridspec_kw={'width_ratios': [1, 1.255]})
     soln = plot(u)
-    ax2.set_title(("Segment Case Simulation at Time Step Number %d") % time)
+    ax2.set_title(("Pressure in Disc at Time Step Number %d") % time)
     ax2.set_ylabel("y position (m)")
     ax2.set_xlabel("x position (m)")
     cbar = plt.colorbar(soln)
     cbar.set_label("Pressure (Pa)")
     ax2.set_aspect('equal', adjustable='box') # equal axes 
 
-    ax1.set_title("Position of Liquid Front")
+    ax1.set_title("Least Squared Position of Liquid Front")
     ax1.set_ylabel("y position (m)")
     ax1.set_xlabel("x position (m)")
     ax1.set_xlim(-1.05*radius, 1.05*radius)
     ax1.set_ylim(-1.05*radius, 1.05*radius)
-    ax1.plot(x_plot, f_curve(x_plot, *popt), 'r-')
+    ax1.plot(x_plot, f_curve(x_plot, c_1, c_2), 'r-')
     ax1.add_patch(circle1)
     ax1.set_aspect('equal', adjustable='box') # equal axes 
 
@@ -179,28 +179,3 @@ while time >= 0:
 print(heights)
 print("Simulation Done!")
 
-
-
-#    # Plot and save solution
-#    soln = plot(u)
-#    plt.title(("Segment Case Simulation at Time Step Number %d") % time)
-#    plt.ylabel("y position (m)")
-#    plt.xlabel("x position (m)")
-#    cbar = plt.colorbar(soln)
-#    cbar.set_label("Pressure (Pa)")
-#    plt.gca().set_aspect('equal', adjustable='box') # equal axes 
-#    plt.savefig(("./TimeSim/Pics/TimeSim-%d.png" % time)) # save plot as png 
-#    #plt.show()
-#    plt.clf() # clear plot 
-#
-#    plt.scatter(points[:,0], points[:,1])
-#    plt.xlim(-1.05*radius, 1.05*radius)
-#    plt.ylim(-1.05*radius, 1.05*radius)
-#    plt.plot(x_plot, f_curve(x_plot, *popt), 'r-')
-#    #plt.gca().add_patch(circle1)
-#    plt.gca().set_aspect('equal', adjustable='box')
-#    plt.title(("Points Assessed in Time Sim at Time Step Number %d") % time)
-#    plt.ylabel("y position (m)")
-#    plt.xlabel("x position (m)")
-#    plt.savefig(("./TimeSim/PointsPics/TimeSim-%d.png" % time))
-#    plt.clf()
